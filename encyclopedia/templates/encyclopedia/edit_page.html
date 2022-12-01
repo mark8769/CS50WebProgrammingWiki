@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create a new page
+{% endblock %}
+
+{% block body %}
+<form action="{% url 'edit_page' title %}" style="height: 60%; width: 90%" method="post">
+    <!-- This is to avoid a Cross Site Request Forgery e.g. (A person trying to 
+        receive information from our site) This is required for forms in Django -->
+    {% csrf_token %} 
+    <!-- https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_textarea -->
+    <h1>Edit Wiki entry below</h1>
+    <p><label for="wiki_entry">Make sure to use markdown for entry below</label></p>
+    <textarea id="user_entry" name="user_entry" style="height: 100%; width: 100%">{{ entry_info }}</textarea>
+    <input type="submit" value="Submit Entry">
+</form>
+{% endblock %}
