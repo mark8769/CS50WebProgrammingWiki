@@ -1,0 +1,4 @@
+# Ignore mac dot files (desktop app placement)
+*.DS_Store
+# Ignore compiled python bytecode cache files
+*__pycache__
