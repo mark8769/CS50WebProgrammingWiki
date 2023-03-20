@@ -55,11 +55,12 @@ def new_page(request):
         user_title = request.POST.get("user_title")
 
         if user_title in util.list_entries():
-            return render(request, "encyclopedia/page_not_saved.html")
+            return render(request, "encyclopedia/page_not_saved.html",
+                          {"context": "Entry already exists. Consider editing instead."})
         else:
-            # else if title does not exist, you can save entry
+            # Else if title does not exist, you can save entry.
             util.save_entry(user_title, user_markdown)
-            # redirect user to wiki route
+            # Redirect user to wiki route.
             return redirect(f"wiki/{user_title}")
 
     return render(request, "encyclopedia/new_page.html")
