@@ -1,8 +1,8 @@
 # https://docs.djangoproject.com/en/4.1/topics/http/shortcuts/
 from django.shortcuts import render
 from django.shortcuts import redirect
-from django.urls import reverse
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
+# Convert input from textarea to markdown.
 import markdown2
 from random import randint
 
@@ -44,7 +44,12 @@ def wiki(request, TITLE):
             "title": TITLE
         })
 
+
 def new_page(request):
+    '''
+    Function to handle the post request from the new_page 
+    path.
+    '''
 
     if request.method == "POST":
         # Submitting form through POST request
@@ -67,7 +72,10 @@ def new_page(request):
 
 
 def random(request):
-    
+    '''
+    Function to handle the random path request to give the user
+    a random entry from all the available entries on the page.
+    '''
     entries_list = util.list_entries()
     random_int = randint(0, len(entries_list) - 1)
     entry = entries_list[random_int]
@@ -75,7 +83,10 @@ def random(request):
     return redirect(f"wiki/{entry}")
 
 def edit_page(request, TITLE):
-
+    '''
+    Handle's the request to edit an entry on the site.
+    Save's all new info.
+    '''
     # user submitted their changes through submit entry button
     if request.method == "POST":
         # get entry information (<textarea> id)
