@@ -41,3 +41,33 @@ pip3 install -r requirements.txt
 ```
 python3 manage.py runserver
 ```
+
+## Using virtual environment on Mac and Windows.
+
+1. Create a python virtual environment inside the project. (1st: Mac, 2nd: Windows)
+
+[Python virtual environments](https://docs.python.org/3/tutorial/venv.html)
+
+```
+python3 -m venv environment_name
+```
+
+```
+python -m venv ./venv
+```
+
+2. Activate the virtual environment. (1st: Mac, 2nd: Windows)
+
+```
+source environment_name/bin/activate
+```
+
+```
+.\venv\Scripts\activate
+```
+
+3. Install the required dependencies.
+
+```
+pip3 install -r requirements.txt
+```
