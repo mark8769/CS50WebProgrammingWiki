@@ -12,7 +12,7 @@
     <!-- https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_textarea -->
     <h1>Edit Wiki entry below</h1>
     <p><label for="wiki_entry">Make sure to use markdown for entry below</label></p>
-    <textarea id="user_entry" name="user_entry" style="height: 100%; width: 100%">{{ new_page.entry_info }}</textarea>
-    <button type="button" class="btn btn-primary btn-block">Submit</button>
+    <textarea id="user_entry" name="user_entry" style="height: 100%; width: 100%">{{ entry_info }}</textarea>
+    <button type="submit" class="btn btn-primary btn-block">Submit</button>
 </form>
 {% endblock %}
