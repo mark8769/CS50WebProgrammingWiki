@@ -1,5 +1,7 @@
 # Demo
 
+![](readmeResources/demo.gif)
+
 # Purpose
 
 This project aims to get acquainted with the Django framework in python by simulating a wiki-like page. In this project, users can create new wiki pages, edit existing ones, and so on. This information is also reflected on the side navigation bar.
