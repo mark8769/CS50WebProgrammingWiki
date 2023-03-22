@@ -2,11 +2,11 @@
 
 ![](readmeResources/demo.gif)
 
-# Purpose
+## Purpose
 
 This project aims to get acquainted with the Django framework in python by simulating a wiki-like page. In this project, users can create new wiki pages, edit existing ones, and so on. This information is also reflected on the side navigation bar.
 
-# Contents
+## Contents
 
 [Django File Structure](https://techvidvan.com/tutorials/django-project-structure-layout/)
 
@@ -21,3 +21,23 @@ This project aims to get acquainted with the Django framework in python by simul
 3. wiki/ - Project folder for Django, contains configurations files for project.
 4. manage.py - Command line utility to run project.
 5. requirements.txt - Librarys to run project.
+
+## How to use
+
+1. Clone the project somewhere memorable.
+
+```
+git clone https://github.com/mark8769/CS50WebProgrammingWiki
+```
+
+2. Install dependencies, I recommend using a virtual environment.
+
+```
+pip3 install -r requirements.txt
+```
+
+3. Run the application on local server.
+
+```
+python3 manage.py runserver
+```
